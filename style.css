@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top, #ffe6e6, #ffffff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.cake {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.plate {
+    width: 220px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+}
+
+.layer {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    background: #ff9999;
+    border-radius: 10px;
+    left: 0;
+}
+
+.layer-bottom {
+    bottom: 0;
+    background: #ff6666;
+}
+
+.layer-middle {
+    bottom: 50px;
+    background: #ff8080;
+}
+
+.layer-top {
+    bottom: 100px;
+    background: #ff9999;
+}
+
+.candles {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+.candle {
+    width: 10px;
+    height: 30px;
+    background: #ffffff;
+    border-radius: 2px;
+    position: relative;
+}
+
+.flame {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 15px;
+    background: radial-gradient(circle, #ffcc00 0%, #ff6600 70%);
+    border-radius: 50% 50% 0 0;
+    animation: flicker 0.2s infinite alternate;
+}
+
+/* Flame flicker animation */
+@keyframes flicker {
+    from { transform: translateX(-50%) scale(1); opacity: 1; }
+    to { transform: translateX(-50%) scale(1.1); opacity: 0.8; }
+}
+
+/* Birthday Message */
+#message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2rem;
+    color: #ff4d4d;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    opacity: 0;
+}
+
+@keyframes popUp {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
