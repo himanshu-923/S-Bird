@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Birthday Card</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -72,11 +72,27 @@
 
             <h2 id="message">🎉 Happy Birthday! 🎉</h2>
             <!-- Cake End -->
+             <!-- Wish Modal -->
+              
+<div id="wishModal">
+  <div id="wishModalContent">
+      <span class="close" onclick="closeWishModal()">&times;</span>
+      <h2>Make a Wish!</h2>
+      <input type="text" id="wishInput" placeholder="Enter your wish...">
+      <br>
+      <button id="wishSubmit" onclick="submitWish()">Submit</button>
+  </div>
+</div>
+
 
         </div>
     </div>
 
     <script src="script.js"></script>
+    <!-- Firebase App (the core Firebase SDK) -->
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+
 </body>
 
 </html>
