@@ -197,3 +197,43 @@ body {
     from { transform: scale(0.5); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
 }
+/* Wish Modal Styles */
+#wishModal {
+    display: none;
+    position: fixed;
+    z-index: 11;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+#wishModalContent {
+    background: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+#wishInput {
+    width: 80%;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+#wishSubmit {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ff66b2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
