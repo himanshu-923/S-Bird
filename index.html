@@ -1,25 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Birthday Card</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <!-- Main Card Container -->
     <div class="birthday-card" id="mainContent">
-
-        <!-- Card Header -->
         <div class="card-header">
-            <h1>🎂 Happy Birthday, <span id="displayName">Friend</span>! 🎉</h1>
-            <div class="countdown" id="countdown"></div>
+            <h1>🎂 Happy Birthday, <span id="displayName">Friend</span>! �</h1>
         </div>
 
-        <!-- Photo Gallery -->
         <div class="photo-gallery">
             <div class="gallery-container" id="gallery">
                 <img src="memory1.jpg" alt="Memory 1">
@@ -30,7 +22,6 @@
             <button class="gallery-btn next" onclick="nextPhoto()">❯</button>
         </div>
 
-        <!-- Interactive Cards Row -->
         <div class="card-row">
             <div class="interactive-card" onclick="generateCompliment()">
                 <p id="compliment">💖 Tap for love</p>
@@ -40,23 +31,17 @@
             </div>
         </div>
 
-        <!-- Celebrate Button -->
-        <button class="celebrate-btn" onclick="openCakeModal()">🎉 Let's Celebrate Your Birthday!</button>
-
+        <button class="celebrate-btn" id="celebrateBtn" onclick="startCelebration()">🎉 Let's Celebrate Your Birthday!</button>
     </div>
 
-    <!-- Cake Popup Modal -->
     <div id="cakeModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeCakeModal()">&times;</span>
-
-            <!-- Cake Start -->
             <div class="cake">
                 <div class="plate"></div>
                 <div class="layer layer-bottom"></div>
                 <div class="layer layer-middle"></div>
                 <div class="layer layer-top"></div>
-
                 <div class="candles">
                     <div class="candle">
                         <div class="flame"></div>
@@ -69,30 +54,21 @@
                     </div>
                 </div>
             </div>
-
             <h2 id="message">🎉 Happy Birthday! 🎉</h2>
-            <!-- Cake End -->
-             <!-- Wish Modal -->
-              
-<div id="wishModal">
-  <div id="wishModalContent">
-      <span class="close" onclick="closeWishModal()">&times;</span>
-      <h2>Make a Wish!</h2>
-      <input type="text" id="wishInput" placeholder="Enter your wish...">
-      <br>
-      <button id="wishSubmit" onclick="submitWish()">Submit</button>
-  </div>
-</div>
-
-
         </div>
     </div>
 
+    <div id="wishModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeWishModal()">&times;</span>
+            <h2>Make a Wish!</h2>
+            <input type="text" id="wishInput" placeholder="Enter your wish...">
+            <button id="wishSubmit" onclick="submitWish()">Submit</button>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
     <script src="script.js"></script>
-    <!-- Firebase App (the core Firebase SDK) -->
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
-
 </body>
-
 </html>
