@@ -24,49 +24,6 @@ body {
     color: #ff4d4d;
 }
 
-.photo-gallery {
-    position: relative;
-    margin: 20px 0;
-}
-
-.gallery-container {
-    display: flex;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.gallery-container img {
-    width: 100%;
-    transition: transform 0.5s ease;
-    flex-shrink: 0;
-}
-
-.gallery-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #ff8080;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    color: white;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
 .card-row {
     display: flex;
     justify-content: space-around;
