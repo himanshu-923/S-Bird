@@ -21,57 +21,29 @@ try {
 }
 
 // DOM Elements
-const galleryContainer = document.querySelector('.gallery-container');
-const photos = document.querySelectorAll('.gallery-container img');
 const complimentElement = document.getElementById('compliment');
 const fortuneElement = document.getElementById('fortune');
 const wishInput = document.getElementById('wishInput');
 const wishSubmitBtn = document.getElementById('wishSubmit');
 
-// Photo Gallery Variables
-let currentPhotoIndex = 0;
-const photoCount = photos.length;
 
 // Data Arrays
 const compliments = [
-  "You're amazing!",
-  "Your smile lights up the room!",
-  "You're one in a million!",
-  "The world is better with you in it!"
+  "तुम्हारी बातों में वो असर है, जो अधूरी कहानियों को भी मुकम्मल कर दे।",
+  "तुम्हारी आँखें किसी पुराने ग़ज़ल की तरह हैं — हर बार कुछ नया महसूस करवा देती हैं।",
+  "तुम्हारा साथ उस बारिश जैसा है, जो खिड़की पर नहीं — दिल पर गिरती है।",
+  "तुम वो सुकून हो जो शहरों में नहीं, किसी सुनसान शाम में मिलती है।",
+  "तुम्हारा नाम जब हवा में गूंजता है, तो मौसम भी थोड़ी देर ठहर जाता है।"
 ];
 
 const fortunes = [
-  "Great joy is coming your way!",
-  "Adventure awaits around the corner!",
-  "This year will be your best yet!",
-  "Your creativity will blossom!"
+  "किसी चुप शाम में, तुम्हारी अधूरी ख्वाहिशें पूरी होने का रास्ता लेंगी।",
+  "वो पल आने वाला है, जब किस्मत तुम्हें देखकर मुस्कुराएगी और कहेगी — 'अब तेरी बारी है'।",
+  "तुम्हारे सब्र की ज़मीन पर अब खुशियों की बारिश होने वाली है।",
+  "कुछ ऐसा होने वाला है, जो तुम्हारे अंदर के शायर को फिर से जगा देगा।",
+  "तुम्हारा सबसे हसीन सफर अभी शुरू भी नहीं हुआ — पर उसकी आहट आ रही है।"
 ];
 
-// Initialize Gallery
-function initGallery() {
-  photos.forEach((photo, index) => {
-    photo.style.transform = `translateX(${index * 100}%)`;
-  });
-}
-
-// Photo Navigation
-function nextPhoto() {
-  if (photoCount <= 1) return;
-  
-  currentPhotoIndex = (currentPhotoIndex + 1) % photoCount;
-  updateGallery();
-}
-
-function prevPhoto() {
-  if (photoCount <= 1) return;
-  
-  currentPhotoIndex = (currentPhotoIndex - 1 + photoCount) % photoCount;
-  updateGallery();
-}
-
-function updateGallery() {
-  galleryContainer.style.transform = `translateX(-${currentPhotoIndex * 100}%)`;
-}
 
 // Interactive Cards
 function generateCompliment() {
